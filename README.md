@@ -64,7 +64,7 @@ Code for ABOUT ME Section :-
 ABOUT ME Code :-
 void MainWindow::on_actionAboutMe_triggered() {
 
-QFile file("C:\\Users\\hp\\Downloads\\Nisha's Resume (4) (3).txt");
+QFile file("C:\\Users\\hp\\Downloads\\Nisha's Resume (4).pdf");
 
 if(!file.open(QIODevice::ReadOnly))
 
