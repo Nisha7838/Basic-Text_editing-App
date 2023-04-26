@@ -21,15 +21,14 @@ Bold text Code -
 
 void MainWindow::on_actionBold_triggered()
 {
-    QFont font = ui -> textEdit -> currentFont();
-    font.bold() == true ? font.setBold(false) : font.setBold(true);
-    ui -> textEdit -> setCurrentFont(font);
+    ui->textEdit->setFontWeight(QFont::Bold);
 }
 
 UnBold text Code :-
+
 void MainWindow::on_actionUnBold_triggered() {
 
- ui->textEdit->setFontWeight(QFont::Normal);
+     ui->textEdit->setFontWeight(QFont::Normal);
 }
 
 Code for Subscript and Superscript :-
@@ -37,26 +36,25 @@ Code for Subscript and Superscript :-
 Subscript Code :-
 
 void MainWindow::on_actionSuperscript_triggered() {
+      QTextCharFormat format;
 
-QTextCharFormat format;
+      format.setVerticalAlignment(QTextCharFormat::AlignSuperScript);
 
-format.setVerticalAlignment(QTextCharFormat::AlignSuperScript);
+      if(ui->textEdit->hasFocus())
 
-if(ui->textEdit->hasFocus())
-
-   ui->textEdit->mergeCurrentCharFormat(format);
+       ui->textEdit->mergeCurrentCharFormat(format);
 }
 
 Subscript Code :-
 void MainWindow::on_actionSubScript_triggered() {
-
-   QTextCharFormat format;
+        QTextCharFormat format;
   
-   format.setVerticalAlignment(QTextCharFormat::AlignSubScript);
+       format.setVerticalAlignment(QTextCharFormat::AlignSubScript);
   
-   if(ui->textEdit->hasFocus())
+       if(ui->textEdit->hasFocus())
   
-      ui->textEdit->mergeCurrentCharFormat(format);
+       ui->textEdit->mergeCurrentCharFormat(format);
+   
 }
 
 Code for ABOUT ME Section :-
